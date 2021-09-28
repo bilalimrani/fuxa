@@ -2,12 +2,12 @@
 module.exports = {
     // Version to manage update
     version: 1.1,
-    
+
     // Standard language (editor)
     language: 'en',
 
     // The tcp port that the FUXA web server is listening on
-    uiPort: process.env.PORT || 1881,
+    uiPort: process.env.PORT || 5000,
 
     // Used to identify a directory of logger
     // Default: '_logs'
@@ -62,5 +62,5 @@ module.exports = {
 
     // Enable GPIO in Raspberry
     // To enable only by Raspberry Host
-    
+
 }
