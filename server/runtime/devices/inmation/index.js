@@ -26,7 +26,7 @@ function INMATIONclient(_data, _logger, _events) {
     /**
      * Connect the client to inmation server
      * Emit connection status, Clear the memory Topics value
-     */    
+     */
     this.connect = function () {
         return new Promise(async function (resolve, reject) {
             if (data.property && data.property.address) {
@@ -36,7 +36,7 @@ function INMATIONclient(_data, _logger, _events) {
                         _clearVarsValue();
                         options = getConnectionOptions(data.property)
                         if (getProperty) {
-                            var result = await getProperty({query: 'security', name: data.id});
+                            var result = await getProperty({ query: 'security', name: data.id });
                             if (result && result.value && result.value !== 'null') {
                                 // property security mode
                                 var property = JSON.parse(result.value);
@@ -88,7 +88,7 @@ function INMATIONclient(_data, _logger, _events) {
                 _clearVarsValue();
                 reject();
             }
-        });        
+        });
     }
 
     /**
@@ -114,7 +114,7 @@ function INMATIONclient(_data, _logger, _events) {
     /**
      * Take the current Items value (only changed), emit Items value
      * Save DAQ value
-     */    
+     */
     this.polling = function () {
         if (_checkWorking(true)) {
             if (client) {
@@ -156,12 +156,12 @@ function INMATIONclient(_data, _logger, _events) {
         this.addDaq = fnc;                         // Add the DAQ value to db history
         daqInterval = intervalToSave;
     }
-    this.addDaq = null;      
-    
+    this.addDaq = null;
+
     /**
      * Set function to ask property (security)
      */
-     this.bindGetProperty = function (fnc) {
+    this.bindGetProperty = function (fnc) {
         getProperty = fnc;
     }
 
@@ -238,7 +238,7 @@ function INMATIONclient(_data, _logger, _events) {
             return prop;
         } else {
             return null;
-        }        
+        }
     }
 
     /**
@@ -266,12 +266,12 @@ function INMATIONclient(_data, _logger, _events) {
                                     console.error(error);
                                 }
                             }
-                        }                
+                        }
                     });
                     resolve();
                 }
             });
-        });   
+        });
     }
 
     /**
@@ -284,7 +284,7 @@ function INMATIONclient(_data, _logger, _events) {
         _emitValues(varsValue);
     }
 
-    
+
     /**
      * Return the Items that have value changed and clear value changed flag of all Items 
      */
@@ -339,7 +339,7 @@ function INMATIONclient(_data, _logger, _events) {
 
     /**
      * Reset the timeout by browse the Topics, 10 seconds to receive published Topics
-     */    
+     */
     // var _resetBrowserTimeout = function () {
     //     if (browser.timeout) {
     //         clearTimeout(browser.timeout);
@@ -357,7 +357,7 @@ function INMATIONclient(_data, _logger, _events) {
  * Return connection option from device property
  * @param {*} property 
  */
- function getConnectionOptions (property) {
+function getConnectionOptions(property) {
     return {
         url: property.address,
         auth: {},
@@ -366,7 +366,7 @@ function INMATIONclient(_data, _logger, _events) {
 
 module.exports = {
     init: function (settings) {
-        // deviceCloseTimeout = settings.deviceCloseTimeout || 15000;
+        // deviceCloseTimeout = settings.deviceCloseTimeout || 18080;
     },
     create: function (data, logger, events) {
         return new INMATIONclient(data, logger, events);

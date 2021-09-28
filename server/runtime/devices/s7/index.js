@@ -625,7 +625,7 @@ function S7client(_data, _logger, _events) {
 
 module.exports = {
     init: function (settings) {
-        // deviceCloseTimeout = settings.deviceCloseTimeout || 15000;
+        // deviceCloseTimeout = settings.deviceCloseTimeout || 18080;
     },
     create: function (data, logger, events, manager) {
         try { snap7 = require('node-snap7'); } catch { }

@@ -10,7 +10,7 @@ const TOKEN_LIMIT = 100;
 function MODBUSclient(_data, _logger, _events) {
     var memory = {};                        // Loaded Signal grouped by memory { memory index, start, size, ... }
     var data = JSON.parse(JSON.stringify(_data));                   // Current Device data { id, name, tags, enabled, ... }
-    var logger = _logger;  
+    var logger = _logger;
     var client = new ModbusRTU();       // Client Modbus (Master)
     var working = false;                // Working flag to manage overloading polling and connection
     var events = _events;               // Events to commit change to runtime
@@ -37,10 +37,10 @@ function MODBUSclient(_data, _logger, _events) {
      */
     this.connect = function () {
         return new Promise(function (resolve, reject) {
-            if (data.property && data.property.address && (type === ModbusTypes.TCP || 
-                    (type === ModbusTypes.RTU && data.property.baudrate && data.property.databits && data.property.stopbits && data.property.parity))) {
+            if (data.property && data.property.address && (type === ModbusTypes.TCP ||
+                (type === ModbusTypes.RTU && data.property.baudrate && data.property.databits && data.property.stopbits && data.property.parity))) {
                 try {
-                    if (!client.isOpen  && _checkWorking(true)) {
+                    if (!client.isOpen && _checkWorking(true)) {
                         logger.info(`'${data.name}' try to connect ${data.property.address}`, true);
                         _connect(function (err) {
                             if (err) {
@@ -154,7 +154,7 @@ function MODBUSclient(_data, _logger, _events) {
                     // console.error('then error');
                 }
                 if (lastStatus !== 'connect-ok') {
-                    _emitStatus('connect-ok');                    
+                    _emitStatus('connect-ok');
                 }
             }, reason => {
                 if (reason) {
@@ -196,7 +196,7 @@ function MODBUSclient(_data, _logger, _events) {
                     memory[memaddr].Items[offset] = new MemoryItem(data.tags[id].type, offset);
                 }
                 memory[memaddr].Items[offset].Tags.push(data.tags[id]); // because you can have multiple tags at the same DB address
-                
+
                 if (offset < memory[memaddr].Start) {
                     if (memory[memaddr].Start != 65536) {
                         memory[memaddr].MaxSize += memory[memaddr].Start - offset;
@@ -212,7 +212,7 @@ function MODBUSclient(_data, _logger, _events) {
                     }
                 }
                 memItemsMap[id] = memory[memaddr].Items[offset];
-                stepsMap[parseInt(data.tags[id].memaddress) + offset] =  { size: datatypes[data.tags[id].type].WordLen, offset: offset };
+                stepsMap[parseInt(data.tags[id].memaddress) + offset] = { size: datatypes[data.tags[id].type].WordLen, offset: offset };
             } catch (err) {
                 logger.error(`'${data.name}' load error! ${err}`);
             }
@@ -221,12 +221,12 @@ function MODBUSclient(_data, _logger, _events) {
         let lastStart = -1;             // last start address
         let lastMemAdr = -1;
         let nextAdr = -1;
-        Object.keys(stepsMap).sort((a, b) => {return a - b; }).forEach(function(key) {
+        Object.keys(stepsMap).sort((a, b) => { return a - b; }).forEach(function (key) {
             try {
                 var adr = parseInt(key);        // tag address
                 let lastAdrSize = adr + stepsMap[key].size;
                 let offset = stepsMap[key].offset;
-                if (nextAdr < adr) {                    
+                if (nextAdr < adr) {
                     // to fragment then new range
                     lastStart = adr;
                     let mits = new MemoryItems();
@@ -236,7 +236,7 @@ function MODBUSclient(_data, _logger, _events) {
                     lastMemAdr = getMemoryAddress(lastStart, true, token);
                     mits.Items = getMemoryItems(memory[lastMemAdr].Items, mits.Start, mits.MaxSize);
                     mixItemsMap[lastStart] = mits;
-                } else if (mixItemsMap[lastStart]) {    
+                } else if (mixItemsMap[lastStart]) {
                     // to attach of exist range
                     mixItemsMap[lastStart].MaxSize = lastAdrSize - lastStart;
                     mixItemsMap[lastStart].Items = getMemoryItems(memory[lastMemAdr].Items, mixItemsMap[lastStart].Start, mixItemsMap[lastStart].MaxSize);
@@ -261,7 +261,7 @@ function MODBUSclient(_data, _logger, _events) {
      */
     this.getValue = function (id) {
         if (varsValue[id]) {
-            return {id: id, value: varsValue[id].value, ts: lastTimestampValue };
+            return { id: id, value: varsValue[id].value, ts: lastTimestampValue };
         }
         return null;
     }
@@ -321,19 +321,20 @@ function MODBUSclient(_data, _logger, _events) {
         daqInterval = intervalToSave;
     }
 
-    this.addDaq = null;      
+    this.addDaq = null;
 
     /**
      * Connect with RTU or TCP
      */
-    var _connect = function(callback) {
+    var _connect = function (callback) {
         try {
             if (type === ModbusTypes.RTU) {
                 client.connectRTUBuffered(data.property.address, {
                     baudRate: parseInt(data.property.baudrate),
                     dataBits: parseInt(data.property.databits),
                     stopBits: parseFloat(data.property.stopbits),
-                    parity: data.property.parity.toLowerCase()}, callback);
+                    parity: data.property.parity.toLowerCase()
+                }, callback);
             } else if (type === ModbusTypes.TCP) {
                 var port = 502;
                 var addr = data.property.address;
@@ -362,7 +363,7 @@ function MODBUSclient(_data, _logger, _events) {
             if (vars.length === 0) return resolve([]);
             // define read function
             if (memoryAddress === ModbusMemoryAddress.CoilStatus) {                      // Coil Status (Read/Write 000001-065536)
-                client.readCoils(start, size).then( res => {
+                client.readCoils(start, size).then(res => {
                     let changed = [];
                     if (res.data) {
                         vars.map(v => {
@@ -380,7 +381,7 @@ function MODBUSclient(_data, _logger, _events) {
                     reject(reason);
                 });
             } else if (memoryAddress === ModbusMemoryAddress.DigitalInputs) {          // Digital Inputs (Read 100001-165536)
-                client.readDiscreteInputs(start, size).then( res => {
+                client.readDiscreteInputs(start, size).then(res => {
                     let changed = [];
                     if (res.data) {
                         vars.map(v => {
@@ -398,7 +399,7 @@ function MODBUSclient(_data, _logger, _events) {
                     reject(reason);
                 });
             } else if (memoryAddress === ModbusMemoryAddress.InputRegisters) {          // Input Registers (Read  300001-365536)
-                client.readInputRegisters(start, size).then( res => {
+                client.readInputRegisters(start, size).then(res => {
                     let changed = [];
                     if (res.data) {
                         vars.map(v => {
@@ -409,7 +410,7 @@ function MODBUSclient(_data, _logger, _events) {
                                 if (value !== v.value) {
                                     changed.push(v);
                                 }
-                                v.value = value;    
+                                v.value = value;
                             } catch (err) {
                                 console.error(err);
                             }
@@ -420,7 +421,7 @@ function MODBUSclient(_data, _logger, _events) {
                     reject(reason);
                 });
             } else if (memoryAddress === ModbusMemoryAddress.HoldingRegisters) {          // Holding Registers (Read/Write  400001-465535)
-                client.readHoldingRegisters(start, size).then( res => {
+                client.readHoldingRegisters(start, size).then(res => {
                     let changed = [];
                     if (res.data) {
                         vars.map(v => {
@@ -564,13 +565,13 @@ function MODBUSclient(_data, _logger, _events) {
         return true;
     }
 
-    const formatAddress = function(address, token) { return token + '-' + address; }
-    const parseAddress = function(address) { return { token:  address.split('-')[0], address: address.split('-')[1] }; }
-    const getMemoryAddress = function(address, askey, token) {
+    const formatAddress = function (address, token) { return token + '-' + address; }
+    const parseAddress = function (address) { return { token: address.split('-')[0], address: address.split('-')[1] }; }
+    const getMemoryAddress = function (address, askey, token) {
         if (address < ModbusMemoryAddress.DigitalInputs) {
             if (askey) {
                 return formatAddress('000000', token);
-            } 
+            }
             return ModbusMemoryAddress.CoilStatus;
         } else if (address < ModbusMemoryAddress.InputRegisters) {
             if (askey) {
@@ -589,7 +590,7 @@ function MODBUSclient(_data, _logger, _events) {
             return ModbusMemoryAddress.HoldingRegisters;
         }
     }
-    const convertValue = function (value, divisor, tosrc = false) { 
+    const convertValue = function (value, divisor, tosrc = false) {
         try {
             if (divisor && parseFloat(divisor)) {
                 if (tosrc) {
@@ -611,7 +612,7 @@ function MODBUSclient(_data, _logger, _events) {
      * @param {*} size 
      * @returns 
      */
-    const getMemoryItems = function(items, start, size) {
+    const getMemoryItems = function (items, start, size) {
         let result = {};
         for (var itemidx in items) {
             if (items[itemidx].offset >= start && items[itemidx].offset < start + size) {
@@ -628,7 +629,7 @@ const ModbusMemoryAddress = { CoilStatus: 0, DigitalInputs: 100000, InputRegiste
 
 module.exports = {
     init: function (settings) {
-        // deviceCloseTimeout = settings.deviceCloseTimeout || 15000;
+        // deviceCloseTimeout = settings.deviceCloseTimeout || 18080;
     },
     create: function (data, logger, events, manager) {
         try { ModbusRTU = require('modbus-serial'); } catch { }

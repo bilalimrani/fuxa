@@ -480,7 +480,7 @@ function MQTTclient(_data, _logger, _events) {
             if (browser && browser.connected) {
                 browser.end(true);
             }
-        }, 15000);
+        }, 18080);
     }
 
     /**
@@ -557,7 +557,7 @@ function getConnectionOptions(property) {
 
 module.exports = {
     init: function (settings) {
-        // deviceCloseTimeout = settings.deviceCloseTimeout || 15000;
+        // deviceCloseTimeout = settings.deviceCloseTimeout || 18080;
     },
     create: function (data, logger, events) {
         return new MQTTclient(data, logger, events);

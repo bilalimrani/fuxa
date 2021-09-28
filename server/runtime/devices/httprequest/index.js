@@ -98,7 +98,7 @@ function HTTPclient(_data, _logger, _events) {
                             }
                         }
                         if (lastStatus !== 'connect-ok') {
-                            _emitStatus('connect-ok');                    
+                            _emitStatus('connect-ok');
                         }
                     }
                     _checkWorking(false);
@@ -144,14 +144,14 @@ function HTTPclient(_data, _logger, _events) {
                 if (!requestItemsMap[data.tags[id].address]) {
                     requestItemsMap[data.tags[id].address] = [data.tags[id]];
                 } else {
-                    requestItemsMap[data.tags[id].address].push(data.tags[id]);   
+                    requestItemsMap[data.tags[id].address].push(data.tags[id]);
                 }
             }
 
             logger.info(`'${data.name}' data loaded (${count})`, true);
         } catch (err) {
             logger.error(`'${data.name}' load error! ${err}`);
-        }            
+        }
     }
 
     /**
@@ -159,7 +159,7 @@ function HTTPclient(_data, _logger, _events) {
      */
     this.getValue = function (id) {
         if (varsValue[id]) {
-            return {id: id, value: varsValue[id].value, ts: lastTimestampValue };
+            return { id: id, value: varsValue[id].value, ts: lastTimestampValue };
         }
         return null;
     }
@@ -303,7 +303,7 @@ function parseData(data, property) {
 
     } else {
         return data;
-    }    
+    }
 }
 
 function parseCSV(data) {
@@ -312,7 +312,7 @@ function parseCSV(data) {
 
 function dataToFlat(data, property) {
 
-    var parseTree = function(nodes, id, parent) {
+    var parseTree = function (nodes, id, parent) {
         let result = {};
         let nodeId = id;
         if (parent) {
@@ -320,21 +320,21 @@ function dataToFlat(data, property) {
         }
         if (Array.isArray(nodes)) {
             let idx = 0;
-            for(var key in nodes) {
+            for (var key in nodes) {
                 let tres = parseTree(nodes[key], '[' + idx++ + ']', nodeId);
-                Object.keys(tres).forEach( key => {
-                    result[key] = tres[key]; 
+                Object.keys(tres).forEach(key => {
+                    result[key] = tres[key];
                 });
             }
         } else if (nodes && typeof nodes === 'object') {
-            for(var key in nodes) {
+            for (var key in nodes) {
                 let tres = parseTree(nodes[key], key, nodeId);
-                Object.keys(tres).forEach( key => {
-                    result[key] = tres[key]; 
+                Object.keys(tres).forEach(key => {
+                    result[key] = tres[key];
                 });
             }
         } else {
-            result[nodeId] = nodes; 
+            result[nodeId] = nodes;
         }
         return result;
     }
@@ -370,7 +370,7 @@ function getRequestResult(property) {
 
 module.exports = {
     init: function (settings) {
-        // deviceCloseTimeout = settings.deviceCloseTimeout || 15000;
+        // deviceCloseTimeout = settings.deviceCloseTimeout || 18080;
     },
     create: function (data, logger, events) {
         return new HTTPclient(data, logger, events);

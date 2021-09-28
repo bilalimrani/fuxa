@@ -13,7 +13,7 @@ var INMATIONclient = require('./inmation');
 // var TEMPLATEclient = require('./template');
 
 var deviceCloseTimeout = 1000;
-var DEVICE_CHECK_STATUS_INTERVAL = 5000;
+var DEVICE_CHECK_STATUS_INTERVAL = 8080;
 var DEVICE_POLLING_INTERVAL = 3000;             // with DAQ enabled, will be saved only changed values in this interval
 var DEVICE_DAQ_MIN_INTERVAL = 60000;            // with DAQ enabled, interval to save DAQ value anyway !!bigger as DEVICE_POLLING_INTERVAL
 
@@ -28,8 +28,8 @@ function Device(data, runtime) {
     var devicePolling = null;                               // TimerInterval to polling read device value
     var pollingInterval = DEVICE_POLLING_INTERVAL;
     var comm;                                               // Interface to OPCUA/S7/.. Device
-                                                            // required: connect, disconnect, isConnected, polling, init, load, getValue, 
-                                                            // getValues, getStatus, setValue, bindAddDaq, getTagProperty, 
+    // required: connect, disconnect, isConnected, polling, init, load, getValue, 
+    // getValues, getStatus, setValue, bindAddDaq, getTagProperty, 
     if (data.type === DeviceEnum.S7) {
         if (!S7client) {
             return null;
@@ -44,27 +44,27 @@ function Device(data, runtime) {
         if (!MODBUSclient) {
             return null;
         }
-        comm = MODBUSclient.create(data, logger, events, manager);        
+        comm = MODBUSclient.create(data, logger, events, manager);
     } else if (data.type === DeviceEnum.BACnet) {
         if (!BACNETclient) {
             return null;
         }
-        comm = BACNETclient.create(data, logger, events, manager);        
+        comm = BACNETclient.create(data, logger, events, manager);
     } else if (data.type === DeviceEnum.WebAPI) {
         if (!HTTPclient) {
             return null;
         }
-        comm = HTTPclient.create(data, logger, events, manager);        
+        comm = HTTPclient.create(data, logger, events, manager);
     } else if (data.type === DeviceEnum.MQTTclient) {
         if (!MQTTclient) {
             return null;
         }
-        comm = MQTTclient.create(data, logger, events, manager);        
+        comm = MQTTclient.create(data, logger, events, manager);
     } else if (data.type === DeviceEnum.inmation) {
         if (!INMATIONclient) {
             return null;
         }
-        comm = INMATIONclient.create(data, logger, events, manager);     
+        comm = INMATIONclient.create(data, logger, events, manager);
     }
     // else if (data.type === DeviceEnum.Template) {
     //     if (!TEMPLATEclient) {
@@ -236,11 +236,11 @@ function Device(data, runtime) {
             }
         });
     }
-    
+
     /**
      * Call Device to return Tag/Node attribute (only OPCUA)
      */
-    this.readNodeAttribute = function(node) {
+    this.readNodeAttribute = function (node) {
         return new Promise(function (resolve, reject) {
             if (data.type === DeviceEnum.OPCUA) {
                 comm.readAttribute(node).then(function (result) {
@@ -342,7 +342,7 @@ function loadPlugin(type, module) {
 
 module.exports = {
     init: function (settings) {
-        // deviceCloseTimeout = settings.deviceCloseTimeout || 15000;
+        // deviceCloseTimeout = settings.deviceCloseTimeout || 18080;
     },
     create: function (data, runtime) {
         return new Device(data, runtime);

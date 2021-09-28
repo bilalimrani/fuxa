@@ -41,7 +41,7 @@ function OpcUAclient(_data, _logger, _events) {
                     // step 1 check property
                     function (callback) {
                         if (getProperty) {
-                            getProperty({query: 'security', name: data.id}).then(result => {
+                            getProperty({ query: 'security', name: data.id }).then(result => {
                                 if (result && result.value && result.value !== 'null') {
                                     // property security mode
                                     property = JSON.parse(result.value);
@@ -49,7 +49,8 @@ function OpcUAclient(_data, _logger, _events) {
                                         // applicationName: 'Myclient',
                                         endpointMustExist: false,
                                         keepSessionAlive: true,
-                                        connectionStrategy: { maxRetry: 1 } };
+                                        connectionStrategy: { maxRetry: 1 }
+                                    };
                                     if (property.mode) {
                                         if (property.mode.securityMode) {
                                             opts['securityMode'] = property.mode.securityMode;
@@ -58,16 +59,16 @@ function OpcUAclient(_data, _logger, _events) {
                                             opts['securityPolicy'] = property.mode.securityPolicy;
                                         }
                                     }
-                                    client = opcua.OPCUAClient.create(opts);  
+                                    client = opcua.OPCUAClient.create(opts);
                                 }
                                 callback();
                             }).catch(function (err) {
                                 callback(err);
-                            });  
+                            });
                         } else {
                             callback();
                         }
-                    },                    
+                    },
                     // step 2 connect
                     function (callback) {
                         const endpoint = data.property.address;
@@ -86,11 +87,11 @@ function OpcUAclient(_data, _logger, _events) {
                         });
                         client.on("backoff", (retry, delay) => {
                             logger.error(`'${data.name}' retry to connect! ${retry}`);
-                        });                        
+                        });
                     },
                     // step 3 create session
                     function (callback) {
-                        const userIdentityInfo = { };
+                        const userIdentityInfo = {};
                         if (property && property.uid && property.pwd) {
                             userIdentityInfo['userName'] = property.uid;
                             userIdentityInfo['password'] = property.pwd;
@@ -110,7 +111,7 @@ function OpcUAclient(_data, _logger, _events) {
                                 the_session.on('keepalive_failure', () => {
                                     logger.error(`'${data.name}' session keepalive failure!`);
                                 });
-                                the_session.on("terminated", function() {
+                                the_session.on("terminated", function () {
                                     console.log("terminated");
                                 });
                                 _createSubscription();
@@ -266,7 +267,7 @@ function OpcUAclient(_data, _logger, _events) {
             });
         });
     }
-                 
+
     /**
      * Read node attribute
      */
@@ -366,7 +367,7 @@ function OpcUAclient(_data, _logger, _events) {
      */
     this.getValue = function (id) {
         if (varsValue[id]) {
-            return {id: id, value: varsValue[id].value, ts: lastTimestampValue };
+            return { id: id, value: varsValue[id].value, ts: lastTimestampValue };
         }
         return null;
     }
@@ -434,7 +435,7 @@ function OpcUAclient(_data, _logger, _events) {
         daqInterval = intervalToSave;
     }
     this.addDaq = null;                             // Callback to add the DAQ value to db history
-    
+
     /**
      * Set function to ask property (security)
      */
@@ -721,21 +722,21 @@ function OpcUAclient(_data, _logger, _events) {
  */
 function getEndPoints(endpointUrl) {
     return new Promise(function (resolve, reject) {
-        if (loadOpcUALib()) { 
+        if (loadOpcUALib()) {
             let opts = { connectionStrategy: { maxRetry: 1 } };
-            let client = opcua.OPCUAClient.create(opts);  
+            let client = opcua.OPCUAClient.create(opts);
             try {
                 client.connect(endpointUrl, function (err) {
                     if (err) {
                         reject('getendpoints-connect-error: ' + err.message);
                     } else {
                         const endpoints = client.getEndpoints().then(endpoints => {
-                            const reducedEndpoints = endpoints.map(endpoint => ({ 
-                                endpointUrl: endpoint.endpointUrl, 
-                                securityMode: endpoint.securityMode.toString(), 
+                            const reducedEndpoints = endpoints.map(endpoint => ({
+                                endpointUrl: endpoint.endpointUrl,
+                                securityMode: endpoint.securityMode.toString(),
                                 securityPolicy: endpoint.securityPolicyUri.toString(),
                             }));
-                            resolve( reducedEndpoints);
+                            resolve(reducedEndpoints);
                             client.disconnect();
                         }, reason => {
                             reject('getendpoints-error: ' + reason);
@@ -762,7 +763,7 @@ function loadOpcUALib() {
 
 module.exports = {
     init: function (settings) {
-        // deviceCloseTimeout = settings.deviceCloseTimeout || 15000;
+        // deviceCloseTimeout = settings.deviceCloseTimeout || 18080;
     },
     create: function (data, logger, events, manager) {
         if (!loadOpcUALib()) return null;

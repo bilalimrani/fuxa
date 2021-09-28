@@ -7,7 +7,7 @@ module.exports = {
     language: 'en',
 
     // The tcp port that the FUXA web server is listening on
-    uiPort: process.env.PORT || 5000,
+    uiPort: process.env.PORT || 8080,
 
     // Used to identify a directory of logger
     // Default: '_logs'
@@ -32,7 +32,7 @@ module.exports = {
     //uiHost: "127.0.0.1",
 
     // Used to identify a directory of static content
-    // that should be served at http://localhost:1881/.
+    // that should be served at http://localhost:8080/.
     // Default: '/client/dist'
     //httpStatic: '/usr/home/fuxa/dist',
 
