@@ -1,0 +1,216 @@
+2021-09-24T17:29:13.158Z [info] FUXA V.1.1.01-469
+2021-09-24T17:29:13.167Z [info] daqstorage: init successful!
+2021-09-24T17:29:13.277Z [info] api: init successful!
+2021-09-24T17:29:13.280Z [info] plugin-installed node-opcua 2.50.0
+2021-09-24T17:29:13.280Z [info] plugin-installed node-bacnet 0.2.4
+2021-09-24T17:29:13.280Z [info] plugin-installed node-snap7 1.0.6
+2021-09-24T17:29:13.280Z [info] runtime init plugins successful!
+2021-09-24T17:29:13.281Z [info] usrstorage.connected /Users/bilal/Documents/GitHub/FUXA/server/_appdata/users.fuxap.db database
+2021-09-24T17:29:13.281Z [info] prjstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/project.fuxap.db database
+2021-09-24T17:29:13.283Z [info] users.usrstorage-init successful!
+2021-09-24T17:29:13.366Z [info] project.prjstorage-init-successful!
+2021-09-24T17:29:13.366Z [info] users.usrstorage-set-default successful!
+2021-09-24T17:29:13.367Z [info] runtime init users successful!
+2021-09-24T17:29:13.367Z [info] project.prjstorage-set-default-successful!
+2021-09-24T17:29:13.367Z [info] runtime init project successful!
+2021-09-24T17:29:13.367Z [info] FUXA init in  219ms.
+2021-09-24T17:29:13.370Z [info] daqstorage reset!
+2021-09-24T17:29:13.371Z [info] FUXA started!
+2021-09-24T17:29:13.396Z [info] WebServer is running http://127.0.0.1:8080/
+2021-09-24T17:29:14.039Z [info] socket.io client connected
+2021-09-24T17:29:14.378Z [info] alarmsstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/alarms.fuxap.db database.
+2021-09-24T17:29:14.381Z [info] alarms.alarmstorage-init-successful!
+2021-09-24T17:29:30.249Z [info] socket.io client connected
+2021-09-24T17:30:53.832Z [info] alarms.stop-checkstatus!
+2021-09-24T17:30:55.332Z [info] FUXA V.1.1.01-469
+2021-09-24T17:30:55.341Z [info] daqstorage: init successful!
+2021-09-24T17:30:55.451Z [info] api: init successful!
+2021-09-24T17:30:55.453Z [info] plugin-installed node-opcua 2.50.0
+2021-09-24T17:30:55.453Z [info] plugin-installed node-bacnet 0.2.4
+2021-09-24T17:30:55.453Z [info] plugin-installed node-snap7 1.0.6
+2021-09-24T17:30:55.453Z [info] runtime init plugins successful!
+2021-09-24T17:30:55.454Z [info] prjstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/project.fuxap.db database
+2021-09-24T17:30:55.455Z [info] usrstorage.connected /Users/bilal/Documents/GitHub/FUXA/server/_appdata/users.fuxap.db database
+2021-09-24T17:30:55.458Z [info] project.prjstorage-init-successful!
+2021-09-24T17:30:55.458Z [info] runtime init project successful!
+2021-09-24T17:30:55.458Z [info] users.usrstorage-init successful!
+2021-09-24T17:30:55.458Z [info] runtime init users successful!
+2021-09-24T17:30:55.458Z [info] FUXA init in  136ms.
+2021-09-24T17:30:55.461Z [info] daqstorage reset!
+2021-09-24T17:30:55.462Z [info] FUXA started!
+2021-09-24T17:30:55.491Z [info] WebServer is running http://127.0.0.1:8080/
+2021-09-24T17:30:56.471Z [info] alarmsstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/alarms.fuxap.db database.
+2021-09-24T17:30:56.473Z [info] alarms.alarmstorage-init-successful!
+2021-09-24T17:30:57.716Z [info] socket.io client connected
+2021-09-24T17:31:02.431Z [info] socket.io client connected
+2021-09-24T17:34:32.477Z [info] socket.io client connected
+2021-09-24T17:34:33.988Z [info] socket.io client connected
+2021-09-24T17:35:35.168Z [info] socket.io client connected
+2021-09-24T17:37:49.182Z [info] socket.io client connected
+2021-09-24T17:40:09.125Z [info] socket.io client connected
+2021-09-24T17:42:01.196Z [info] socket.io client connected
+2021-09-24T17:43:25.015Z [info] socket.io client connected
+2021-09-24T17:46:42.183Z [info] socket.io client connected
+2021-09-24T17:48:09.039Z [info] socket.io client connected
+2021-09-24T17:49:07.029Z [info] socket.io client connected
+2021-09-24T17:50:06.977Z [info] socket.io client connected
+2021-09-24T17:51:34.077Z [info] socket.io client connected
+2021-09-24T17:52:31.815Z [info] socket.io client connected
+2021-09-24T17:53:31.960Z [info] socket.io client connected
+2021-09-24T17:54:58.492Z [info] socket.io client connected
+2021-09-24T17:55:55.744Z [info] socket.io client connected
+2021-09-24T17:56:52.878Z [info] socket.io client connected
+2021-09-24T17:57:51.934Z [info] socket.io client connected
+2021-09-24T17:58:50.814Z [info] socket.io client connected
+2021-09-24T17:59:50.128Z [info] socket.io client connected
+2021-09-24T18:00:47.905Z [info] socket.io client connected
+2021-09-24T18:03:07.358Z [info] socket.io client connected
+2021-09-24T18:04:35.029Z [info] socket.io client connected
+2021-09-24T18:05:33.220Z [info] socket.io client connected
+2021-09-24T18:07:01.887Z [info] socket.io client connected
+2021-09-24T18:08:02.003Z [info] socket.io client connected
+2021-09-24T18:11:20.009Z [info] socket.io client connected
+2021-09-24T18:12:19.592Z [info] socket.io client connected
+2021-09-24T18:13:17.969Z [info] socket.io client connected
+2021-09-24T18:14:16.910Z [info] socket.io client connected
+2021-09-24T18:15:15.925Z [info] socket.io client connected
+2021-09-24T18:16:15.980Z [info] socket.io client connected
+2021-09-24T18:18:11.099Z [info] socket.io client connected
+2021-09-24T18:18:48.150Z [info] socket.io client connected
+2021-09-24T18:18:48.162Z [info] socket.io client connected
+2021-09-24T18:36:55.916Z [info] socket.io client connected
+2021-09-24T18:36:55.926Z [info] socket.io client connected
+2021-09-24T18:53:06.809Z [info] socket.io client connected
+2021-09-24T18:53:07.447Z [info] socket.io client connected
+2021-09-24T19:10:36.867Z [info] socket.io client connected
+2021-09-24T19:10:36.883Z [info] socket.io client connected
+2021-09-24T19:27:14.630Z [info] socket.io client connected
+2021-09-24T19:27:15.138Z [info] socket.io client connected
+2021-09-24T19:42:29.425Z [info] socket.io client connected
+2021-09-24T19:42:30.376Z [info] socket.io client connected
+2021-09-24T19:57:54.098Z [info] socket.io client connected
+2021-09-24T19:57:55.028Z [info] socket.io client connected
+2021-09-24T20:15:18.035Z [info] socket.io client connected
+2021-09-24T20:15:18.044Z [info] socket.io client connected
+2021-09-24T20:33:11.476Z [info] socket.io client connected
+2021-09-24T20:33:11.754Z [info] socket.io client connected
+2021-09-24T20:48:56.091Z [info] socket.io client connected
+2021-09-24T20:48:56.826Z [info] socket.io client connected
+2021-09-24T21:06:09.903Z [info] socket.io client connected
+2021-09-24T21:06:09.957Z [info] socket.io client connected
+2021-09-24T21:22:16.491Z [info] socket.io client connected
+2021-09-24T21:22:16.573Z [info] socket.io client connected
+2021-09-24T21:39:52.447Z [info] socket.io client connected
+2021-09-24T21:39:52.449Z [info] socket.io client connected
+2021-09-24T21:55:56.383Z [info] socket.io client connected
+2021-09-24T21:55:56.485Z [info] socket.io client connected
+2021-09-24T22:12:00.839Z [info] socket.io client connected
+2021-09-24T22:12:00.858Z [info] socket.io client connected
+2021-09-24T22:28:39.193Z [info] socket.io client connected
+2021-09-24T22:28:39.487Z [info] socket.io client connected
+2021-09-24T22:44:09.367Z [info] socket.io client connected
+2021-09-24T22:44:09.699Z [info] socket.io client connected
+2021-09-24T23:00:11.174Z [info] socket.io client connected
+2021-09-24T23:00:11.791Z [info] socket.io client connected
+2021-09-24T23:16:50.197Z [info] socket.io client connected
+2021-09-24T23:16:50.449Z [info] socket.io client connected
+2021-09-24T23:32:30.498Z [info] socket.io client connected
+2021-09-24T23:32:31.614Z [info] socket.io client connected
+2021-09-24T23:48:28.249Z [info] socket.io client connected
+2021-09-24T23:48:28.567Z [info] socket.io client connected
+2021-09-25T00:04:02.431Z [info] socket.io client connected
+2021-09-25T00:04:03.166Z [info] socket.io client connected
+2021-09-25T00:19:32.625Z [info] socket.io client connected
+2021-09-25T00:19:33.206Z [info] socket.io client connected
+2021-09-25T00:35:23.963Z [info] socket.io client connected
+2021-09-25T00:35:24.004Z [info] socket.io client connected
+2021-09-25T00:51:25.773Z [info] socket.io client connected
+2021-09-25T00:51:26.027Z [info] socket.io client connected
+2021-09-25T01:06:52.352Z [info] socket.io client connected
+2021-09-25T01:06:52.448Z [info] socket.io client connected
+2021-09-25T01:24:27.359Z [info] socket.io client connected
+2021-09-25T01:24:27.373Z [info] socket.io client connected
+2021-09-25T01:40:27.615Z [info] socket.io client connected
+2021-09-25T01:40:27.925Z [info] socket.io client connected
+2021-09-25T01:57:46.743Z [info] socket.io client connected
+2021-09-25T01:57:46.895Z [info] socket.io client connected
+2021-09-25T02:13:44.783Z [info] socket.io client connected
+2021-09-25T02:13:45.948Z [info] socket.io client connected
+2021-09-25T02:30:21.482Z [info] socket.io client connected
+2021-09-25T02:30:22.047Z [info] socket.io client connected
+2021-09-25T02:45:56.385Z [info] socket.io client connected
+2021-09-25T02:45:57.239Z [info] socket.io client connected
+2021-09-25T03:01:37.347Z [info] socket.io client connected
+2021-09-25T03:01:37.802Z [info] socket.io client connected
+2021-09-25T03:18:31.683Z [info] socket.io client connected
+2021-09-25T03:18:32.153Z [info] socket.io client connected
+2021-09-25T03:34:18.874Z [info] socket.io client connected
+2021-09-25T03:34:19.167Z [info] socket.io client connected
+2021-09-25T03:50:39.724Z [info] socket.io client connected
+2021-09-25T03:50:40.772Z [info] socket.io client connected
+2021-09-25T04:06:26.087Z [info] socket.io client connected
+2021-09-25T04:06:26.894Z [info] socket.io client connected
+2021-09-25T04:22:11.314Z [info] socket.io client connected
+2021-09-25T04:22:12.268Z [info] socket.io client connected
+2021-09-25T04:27:10.757Z [info] socket.io client connected
+2021-09-25T04:27:11.362Z [info] socket.io client connected
+2021-09-28T16:59:47.200Z [info] FUXA V.1.1.01-469
+2021-09-28T16:59:47.212Z [info] daqstorage: init successful!
+2021-09-28T16:59:47.313Z [info] api: init successful!
+2021-09-28T16:59:47.315Z [info] plugin-installed node-opcua 2.50.0
+2021-09-28T16:59:47.315Z [info] plugin-installed node-bacnet 0.2.4
+2021-09-28T16:59:47.315Z [info] plugin-installed node-snap7 1.0.6
+2021-09-28T16:59:47.316Z [info] runtime init plugins successful!
+2021-09-28T16:59:47.317Z [info] usrstorage.connected /Users/bilal/Documents/GitHub/FUXA/server/_appdata/users.fuxap.db database
+2021-09-28T16:59:47.317Z [info] prjstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/project.fuxap.db database
+2021-09-28T16:59:47.322Z [info] project.prjstorage-init-successful!
+2021-09-28T16:59:47.322Z [info] runtime init project successful!
+2021-09-28T16:59:47.322Z [info] users.usrstorage-init successful!
+2021-09-28T16:59:47.322Z [info] runtime init users successful!
+2021-09-28T16:59:47.322Z [info] FUXA init in  132ms.
+2021-09-28T16:59:47.326Z [info] daqstorage reset!
+2021-09-28T16:59:47.327Z [info] FUXA started!
+2021-09-28T16:59:47.370Z [info] WebServer is running http://127.0.0.1:8080/
+2021-09-28T16:59:48.337Z [info] alarmsstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/alarms.fuxap.db database.
+2021-09-28T16:59:48.338Z [info] alarms.alarmstorage-init-successful!
+2021-09-28T17:01:08.588Z [info] alarms.stop-checkstatus!
+2021-09-28T17:01:10.464Z [info] FUXA V.1.1.01-469
+2021-09-28T17:01:10.474Z [info] daqstorage: init successful!
+2021-09-28T17:01:10.573Z [info] api: init successful!
+2021-09-28T17:01:10.576Z [info] plugin-installed node-opcua 2.50.0
+2021-09-28T17:01:10.576Z [info] plugin-installed node-bacnet 0.2.4
+2021-09-28T17:01:10.576Z [info] plugin-installed node-snap7 1.0.6
+2021-09-28T17:01:10.576Z [info] runtime init plugins successful!
+2021-09-28T17:01:10.577Z [info] usrstorage.connected /Users/bilal/Documents/GitHub/FUXA/server/_appdata/users.fuxap.db database
+2021-09-28T17:01:10.577Z [info] prjstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/project.fuxap.db database
+2021-09-28T17:01:10.578Z [info] project.prjstorage-init-successful!
+2021-09-28T17:01:10.579Z [info] runtime init project successful!
+2021-09-28T17:01:10.579Z [info] users.usrstorage-init successful!
+2021-09-28T17:01:10.579Z [info] runtime init users successful!
+2021-09-28T17:01:10.579Z [info] FUXA init in  125ms.
+2021-09-28T17:01:10.584Z [info] daqstorage reset!
+2021-09-28T17:01:10.585Z [info] FUXA started!
+2021-09-28T17:01:10.610Z [info] WebServer is running http://127.0.0.1:8080/
+2021-09-28T17:01:11.594Z [info] alarmsstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/alarms.fuxap.db database.
+2021-09-28T17:01:11.595Z [info] alarms.alarmstorage-init-successful!
+2021-09-28T17:01:13.474Z [info] alarms.stop-checkstatus!
+2021-09-28T17:09:21.958Z [info] FUXA V.1.1.01-469
+2021-09-28T17:09:21.972Z [info] daqstorage: init successful!
+2021-09-28T17:09:22.078Z [info] api: init successful!
+2021-09-28T17:09:22.080Z [info] plugin-installed node-opcua 2.50.0
+2021-09-28T17:09:22.081Z [info] plugin-installed node-bacnet 0.2.4
+2021-09-28T17:09:22.081Z [info] plugin-installed node-snap7 1.0.6
+2021-09-28T17:09:22.081Z [info] runtime init plugins successful!
+2021-09-28T17:09:22.082Z [info] usrstorage.connected /Users/bilal/Documents/GitHub/FUXA/server/_appdata/users.fuxap.db database
+2021-09-28T17:09:22.082Z [info] prjstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/project.fuxap.db database
+2021-09-28T17:09:22.085Z [info] project.prjstorage-init-successful!
+2021-09-28T17:09:22.085Z [info] runtime init project successful!
+2021-09-28T17:09:22.086Z [info] users.usrstorage-init successful!
+2021-09-28T17:09:22.086Z [info] runtime init users successful!
+2021-09-28T17:09:22.086Z [info] FUXA init in  139ms.
+2021-09-28T17:09:22.089Z [info] daqstorage reset!
+2021-09-28T17:09:22.090Z [info] FUXA started!
+2021-09-28T17:09:22.114Z [info] WebServer is running http://127.0.0.1:8080/
+2021-09-28T17:09:23.100Z [info] alarmsstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/alarms.fuxap.db database.
+2021-09-28T17:09:23.101Z [info] alarms.alarmstorage-init-successful!
+2021-09-28T17:09:25.103Z [info] alarms.stop-checkstatus!
