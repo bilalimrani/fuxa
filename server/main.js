@@ -28,12 +28,12 @@ var knownOpts = {
     "userDir": [path]
 };
 var shortHands = {
-    "?":["--help"],
-    "p":["--port"],
-    "u":["--userDir"]
+    "?": ["--help"],
+    "p": ["--port"],
+    "u": ["--userDir"]
 };
 
-nopt.invalidHandler = function(k,v,t) {
+nopt.invalidHandler = function (k, v, t) {
     // TODO: console.log(k,v,t);
 }
 
@@ -126,7 +126,7 @@ try {
 
 // Check logger
 if (!settings.logDir) {
-    settings.logDir = path.resolve(rootDir, '_logs'); 
+    settings.logDir = path.resolve(rootDir, '_logs');
 }
 if (!fs.existsSync(settings.logDir)) {
     fs.mkdirSync(settings.logDir);
@@ -166,11 +166,11 @@ const io = socketIO(server);
 var www = path.resolve(__dirname, '../client/dist');
 settings.httpStatic = settings.httpStatic || www;
 
-if (parsedArgs.port !== undefined){
+if (parsedArgs.port !== undefined) {
     settings.uiPort = parsedArgs.port;
 } else {
-    if (settings.uiPort === undefined){
-        settings.uiPort = 1881;
+    if (settings.uiPort === undefined) {
+        settings.uiPort = 5000;
     }
 }
 settings.uiHost = settings.uiHost || "0.0.0.0";
@@ -184,7 +184,7 @@ events.once('init-runtime-ok', function () {
 // Init FUXA
 try {
     FUXA.init(server, io, settings, logger, events);
-} catch(err) {
+} catch (err) {
     if (err.code == 'unsupported_version') {
         logger.error('Unsupported version of node.js:', process.version);
         logger.error('FUXA requires node.js v6 or later');
@@ -202,7 +202,7 @@ try {
 }
 
 // Http Server for client UI
-var allowCrossDomain = function(req, res, next) {
+var allowCrossDomain = function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'x-access-token, x-auth-user, Origin, Content-Type, Accept');
@@ -224,7 +224,7 @@ app.use('/device', express.static(settings.httpStatic));
 app.use('/users', express.static(settings.httpStatic));
 app.use('/view', express.static(settings.httpStatic));
 
-var accessLogStream = fs.createWriteStream(settings.logDir + '/api.log', {flags: 'a'});
+var accessLogStream = fs.createWriteStream(settings.logDir + '/api.log', { flags: 'a' });
 app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(morgan('dev', {
@@ -319,7 +319,7 @@ process.on('uncaughtException', function (err) {
 });
 
 process.on('SIGINT', function () {
-    FUXA.stop().then(function() {
+    FUXA.stop().then(function () {
         process.exit();
     });
     logger.info('FUXA end!');
