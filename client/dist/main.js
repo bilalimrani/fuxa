@@ -1997,7 +1997,7 @@ var AppSettings = /** @class */ (function () {
         /** Editor language */
         this.language = 'en';
         /** Web server port */
-        this.uiPort = 1881;
+        this.uiPort = 8080;
         /** Security access to enable user and authentication */
         this.secureEnabled = false;
         /** Expiration of authanticated token (15m)*/
@@ -2354,7 +2354,7 @@ var HmiService = /** @class */ (function () {
         this.viewSignalGaugeMap = new ViewSignalGaugeMap();
         this.variables = {};
         this.alarms = { highhigh: 0, high: 0, low: 0, info: 0 };
-        this.endPointConfig = _helpers_endpointapi__WEBPACK_IMPORTED_MODULE_6__["EndPointApi"].getURL(); //"http://localhost:1881";
+        this.endPointConfig = _helpers_endpointapi__WEBPACK_IMPORTED_MODULE_6__["EndPointApi"].getURL(); //"http://localhost:8080";
         this.bridge = null;
         if (_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].serverEnabled) {
             this.initSocket();
@@ -22479,7 +22479,7 @@ var environment = {
     version: __webpack_require__(/*! ../../package.json */ "../package.json").version,
     production: false,
     apiEndpoint: null,
-    apiPort: 1881,
+    apiPort: 8080,
     serverEnabled: true,
     type: null
 };

@@ -11,5 +11,5 @@ WORKDIR /usr/src/app/FUXA/server
 RUN npm install
 
 WORKDIR /usr/src/app/FUXA/server
-EXPOSE 1881
+EXPOSE 8080
 CMD [ "npm", "start" ]

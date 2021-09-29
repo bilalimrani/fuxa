@@ -31,8 +31,8 @@ export class HmiService {
     variables = {};
     alarms = { highhigh: 0, high: 0, low: 0, info: 0 };
     private socket;
-    private endPointConfig: string = EndPointApi.getURL();//"http://localhost:1881";
-    private bridge: any = null;     
+    private endPointConfig: string = EndPointApi.getURL();//"http://localhost:8080";
+    private bridge: any = null;
 
     constructor(public projectService: ProjectService,
         private translateService: TranslateService,
@@ -360,7 +360,7 @@ export class HmiService {
      */
     getMappedVariable(sigid: string, fulltext: boolean): Variable {
         if (!this.variables[sigid]) return null;
-        
+
         if (this.variables[sigid]) {
             let result = this.variables[sigid];
             if (fulltext) {
