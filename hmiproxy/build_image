@@ -1,0 +1,7 @@
+!/bin/bash
+
+IMAGE_NAME=bdatabiot/hmiproxy
+docker build -t $IMAGE_NAME .
+
+
+docker push $IMAGE_NAME
