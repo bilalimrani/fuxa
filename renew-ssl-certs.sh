@@ -2,7 +2,7 @@
 
 
 
-DOMAIN_NAME=biot.bdata.ca
+DOMAIN_NAME=hmi.bdata.ca
 
 
 if [ "$1" ]; then
