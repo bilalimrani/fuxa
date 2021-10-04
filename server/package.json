@@ -34,7 +34,7 @@
     "node-snap7": "^1.0.1",
     "nopt": "5.0.0",
     "socket.io": "^2.2.0",
-    "sqlite3": "5.0.0",
+    "sqlite3": "^5.0.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {}
