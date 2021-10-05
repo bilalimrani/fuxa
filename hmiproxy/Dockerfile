@@ -8,7 +8,7 @@ COPY ./certs/chain*.pem    $CERT_PATH/chain.pem
 COPY ./certs/cert*.pem    $CERT_PATH/cert.pem
 COPY ./certs/fullchain*.pem   $CERT_PATH/fullchain.pem
 COPY ./certs/privkey*.pem  $CERT_PATH/privkey.pem
-
+COPY ./fonts /var/www/fonts/
 RUN ls -l /etc/letsencrypt/live/hmi.bdata.ca/
 
 COPY  ./default.conf /etc/nginx/conf.d/default.conf

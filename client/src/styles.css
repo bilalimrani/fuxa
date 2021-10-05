@@ -16,8 +16,7 @@
 }
 @font-face {
     font-family: "Roboto-Thin";
-    src: local("Roboto Thin"), local("Roboto-Thin"),
-        url("./assets/fonts/roboto-thin/roboto-thin-webfont.woff")
+    src: url("./assets/fonts/roboto-thin/roboto-thin-webfont.woff")
             format("woff"),
         url("./assets/fonts/roboto-thin/roboto-thin-webfont.woff2")
             format("woff2"),
@@ -28,8 +27,7 @@
 
 @font-face {
     font-family: "Roboto-Light";
-    src: local("Roboto Light"), local("Roboto-Light"),
-        url("./assets/fonts/roboto-light/roboto-light-webfont.woff")
+    src: url("./assets/fonts/roboto-light/roboto-light-webfont.woff")
             format("woff"),
         url("./assets/fonts/roboto-light/roboto-light-webfont.woff2")
             format("woff2"),
@@ -41,8 +39,7 @@
 
 @font-face {
     font-family: "Roboto-Regular";
-    src: local("Roboto Regular"), local("Roboto-Regular"),
-        url("./assets/fonts/roboto-regular/roboto-regular-webfont.woff")
+    src: url("./assets/fonts/roboto-regular/roboto-regular-webfont.woff")
             format("woff"),
         url("./assets/fonts/roboto-regular/roboto-regular-webfont.woff2")
             format("woff2"),
@@ -54,8 +51,7 @@
 
 @font-face {
     font-family: "Roboto-Medium";
-    src: local("Roboto Medium"), local("Roboto-Medium"),
-        url("./assets/fonts/roboto-medium/roboto-medium-webfont.woff")
+    src: url("./assets/fonts/roboto-medium/roboto-medium-webfont.woff")
             format("woff"),
         url("./assets/fonts/roboto-medium/roboto-medium-webfont.woff2")
             format("woff2"),
@@ -67,8 +63,7 @@
 
 @font-face {
     font-family: "Quicksand-Regular";
-    src: local("Quicksand"), local("Quicksand-Regular"),
-        url("./assets/fonts/quicksand-regular\Quicksand-Regular.woff")
+    src: url("./assets/fonts/quicksand-regular\Quicksand-Regular.woff")
             format("woff"),
         url("./assets/fonts/quicksand-regular\Quicksand-Regular.woff2")
             format("woff2"),
@@ -78,8 +73,7 @@
 
 @font-face {
     font-family: "Quicksand-Medium";
-    src: local("Quicksand Medium"), local("Quicksand-Medium"),
-        url("./assets/fonts/quicksand-medium\Quicksand-Medium.woff")
+    src: url("./assets/fonts/quicksand-medium\Quicksand-Medium.woff")
             format("woff"),
         url("./assets/fonts/quicksand-medium\Quicksand-Medium.woff2")
             format("woff2"),
@@ -89,8 +83,7 @@
 
 @font-face {
     font-family: "Quicksand-Bold";
-    src: local("Quicksand"), local("Quicksand-Bold"),
-        url("./assets/fonts/quicksand-bold\Quicksand-Bold.woff")
+    src: url("./assets/fonts/quicksand-bold\Quicksand-Bold.woff")
             format("woff"),
         url("./assets/fonts/quicksand-bold\Quicksand-Bold.woff2")
             format("woff2"),
@@ -100,8 +93,7 @@
 
 @font-face {
     font-family: "Roboto-Bold";
-    src: local("Roboto Bold"), local("Roboto-Bold"),
-        url("./assets/fonts/roboto-bold/roboto-bold-webfont.woff")
+    src: url("./assets/fonts/roboto-bold/roboto-bold-webfont.woff")
             format("woff"),
         url("./assets/fonts/roboto-bold/roboto-bold-webfont.woff2")
             format("woff2"),
