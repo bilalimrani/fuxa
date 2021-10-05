@@ -20,7 +20,7 @@
             format("woff"),
         url("./assets/fonts/roboto-thin/roboto-thin-webfont.woff2")
             format("woff2"),
-        url("./assets/fonts/roboto-thin/roboto-thin-webfont.ttf")
+        url("https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.9/fonts/Roboto/roboto-thin-webfont.ttf")
             format("truetype"),
         url("./assets/fonts/roboto-thin/roboto-thin-webfont.svg") format("svg");
 }
@@ -31,7 +31,7 @@
             format("woff"),
         url("./assets/fonts/roboto-light/roboto-light-webfont.woff2")
             format("woff2"),
-        url("./assets/fonts/roboto-light/roboto-light-webfont.ttf")
+        url("https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.9/fonts/Roboto/roboto-light-webfont.ttf")
             format("truetype"),
         url("./assets/fonts/roboto-light/roboto-light-webfont.svg")
             format("svg");
@@ -43,7 +43,7 @@
             format("woff"),
         url("./assets/fonts/roboto-regular/roboto-regular-webfont.woff2")
             format("woff2"),
-        url("./assets/fonts/roboto-regular/roboto-regular-webfont.ttf")
+        url("https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.9/fonts/Roboto/roboto-regular-webfont.ttf")
             format("truetype"),
         url("./assets/fonts/roboto-regular/roboto-regular-webfont.svg")
             format("svg");
