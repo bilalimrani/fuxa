@@ -66,7 +66,7 @@ if (!fs.existsSync(workDir)) {
 var appSettingsFile = path.join(workDir, 'settings.js');
 if (fs.existsSync(appSettingsFile)) {
     // _appdata/settings.js exists
-    settingsFile = require(appSettingsFile);
+    settingsFile = appSettingsFile;
 } else {
     // Not exist, copy from code resource
     var defaultSettings = path.join(__dirname, 'settings.default.js');
@@ -76,7 +76,7 @@ if (fs.existsSync(appSettingsFile)) {
     } catch (err) {
         logger.error(err);
     }
-    settingsFile = require(appSettingsFile);
+    settingsFile = appSettingsFile;
 }
 try {
     // load settings and set some app variable
