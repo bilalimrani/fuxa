@@ -66,7 +66,7 @@ if (!fs.existsSync(workDir)) {
 var appSettingsFile = path.join(workDir, 'settings.js');
 if (fs.existsSync(appSettingsFile)) {
     // _appdata/settings.js exists
-    settingsFile = appSettingsFile;
+    settingsFile = require(appSettingsFile);
 } else {
     // Not exist, copy from code resource
     var defaultSettings = path.join(__dirname, 'settings.default.js');

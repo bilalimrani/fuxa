@@ -1,4 +1,4 @@
-
+const path = require('path');
 module.exports = {
     // Version to manage update
     version: 1.1,
@@ -50,10 +50,10 @@ module.exports = {
     // See the comment at the top of this file on how to load the `fs` module used by
     // this setting.
     //
-    //https: {
-    //    key: fs.readFileSync('privatekey.pem'),
-    //    cert: fs.readFileSync('certificate.pem')
-    //},
+    // https: {
+    //     key: fs.readFileSync(path.resolve(__dirname, 'certs/privkey.pem')),
+    //     cert: fs.readFileSync(path.resolve(__dirname, 'certs/fullchain.pem'))
+    // },
 
     // Used to enable security, authentication and authorization and crypt Token
     //secureEnabled: true,
