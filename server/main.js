@@ -76,7 +76,7 @@ if (fs.existsSync(appSettingsFile)) {
     } catch (err) {
         logger.error(err);
     }
-    settingsFile = appSettingsFile;
+    settingsFile = require(appSettingsFile);
 }
 try {
     // load settings and set some app variable
