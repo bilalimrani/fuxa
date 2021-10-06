@@ -58,6 +58,8 @@ if (parsedArgs.userDir) {
     workDir = path.resolve(parsedArgs.userDir, '_appdata');
 }
 
+app.use("/static", express.static('./static/'));
+
 if (!fs.existsSync(workDir)) {
     fs.mkdirSync(workDir);
 }
