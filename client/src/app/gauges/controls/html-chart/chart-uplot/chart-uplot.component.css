@@ -1,0 +1,18 @@
+.mychart-panel {
+    display: block;
+    margin: 0 auto;
+    height: inherit;
+    width: inherit;
+}
+
+.mychart-graph {
+    display: block;
+    margin: 0 auto;
+}
+
+.mychar-toolbar {
+    display: block;
+    height: 34px !important;
+    width: 100% !important;
+    background-color: transparent;
+}

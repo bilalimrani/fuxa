@@ -1,0 +1,93 @@
+
+.panelTop {
+    display: block;
+    width: 100%;
+    height: 480px;
+}
+
+.panelTop .chart-list, .device-list, .tag-list {
+    height: 480px;
+}
+
+.panelBottom {
+    display: block;
+    width: 100%;
+    height: 160px;
+}
+
+.list {
+    width: 100% !important; 
+    height: 100% !important; 
+    font-size: 16px !important; 
+    padding-top: 0px !important;
+}
+
+.list > span  {
+    padding-left: 10px;
+}
+
+.list mat-list-option  {
+    padding-left: 10px;
+}
+
+.chart-list {
+    overflow-y: auto;
+}
+
+.list-item {
+    display: block;
+    font-size: 14px;
+    height: 26px !important;
+    cursor: pointer;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.list-item mat-icon {
+    font-size: 20px;
+}
+
+.list-item span {
+    width: calc(100% - 26px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list-item-text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list-item-hover:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.list-item-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.list-header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    line-height: 26px;
+}
+
+.device-list {
+    margin-right: 2px;
+    overflow-y: auto;
+}
+
+.tag-list {
+    margin-right: 2px;
+    overflow-y: auto;
+}
+
+.color-line {
+    width: 30px;
+    border: unset;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    opacity: 1;
+    background-color: #f1f3f4;
+}

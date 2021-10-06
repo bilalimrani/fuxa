@@ -1,0 +1,146 @@
+$main-backcolor: rgb(12, 101, 189);
+$main-bordercolor: var(--mapBorderColor);//rgb(5, 65, 123);
+$device-color: rgb(79, 86, 93);
+$line-color:   var(--mapBorderColor);
+$flow-backcolor: rgb(218, 218, 218);
+$flow-bordercolor: var(--mapBorderColor);//rgb(117, 117, 117);
+$flowline-color: var(--mapBorderColor);//rgb(117, 117, 117);
+$internal-backcolor: rgb(114,120,125);
+
+.main-device {
+    position: absolute;
+    text-align: center;
+    background-color: $main-backcolor;
+    color: white;
+    border-style: solid;
+    border-color: $main-bordercolor;
+}
+
+.node-device {
+    position: absolute;
+    background-color: $device-color;
+    text-align: center;
+    padding-top: 17px;
+    border-style: solid;
+    border-color: $line-color;
+    mat-icon {
+        color: white;
+    }
+}
+
+.node-internal {
+    position: absolute;
+    background-color: $internal-backcolor;
+    text-align: center;
+    padding-top: 17px;
+    border-style: solid;
+    border-color: $line-color;
+    mat-icon {
+        color: white;
+    }
+}
+
+.node-flow {
+    position: absolute;
+    background-color: $flow-backcolor;
+    text-align: center;
+    padding-top: 17px;
+    border-style: solid;
+    border-color: $flow-bordercolor;
+    mat-icon {
+        color: black;
+    }
+}
+.main-line {
+    position: absolute;
+    background-color: $line-color;
+}
+.main-line-flow {
+    position: absolute;
+    background-color: $flowline-color;
+}
+
+.device-line {
+    position: absolute;
+    background-color: $line-color;
+}
+.flow-line {
+    position: absolute;
+    background-color: $flowline-color;
+}
+.connection-line {
+    position: absolute;
+    background-color: $line-color;
+}
+
+// .main-device mat-icon {
+//     font-size: 0px;
+// }
+// .main-device:hover mat-icon {
+//     font-size: 17px;
+// }
+
+.device-header {
+    display: block;
+    font-size: 17px;
+    padding-bottom: 7px;
+    padding-top: 0px;
+    min-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.device-pro {
+    display: block;
+    font-size: 12px;
+    padding-top: 0px;
+    min-height: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.device-pro-line {
+    display: inline-block;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.device-icon {
+    position: absolute;
+    font-size: 17px;
+    cursor:pointer;
+}
+
+.device-edit {
+    bottom: 0px;
+    right: 2px;
+}
+
+.device-edit-disabled {
+    color:rgb(136, 136, 136) !important;
+    cursor:default;
+}
+
+.device-delete {
+    top: 2px;
+    right: 2px;
+    font-size: 17px;
+}
+
+.device-list {
+    // bottom: 0px;
+    right: 28px;
+    font-size: 24px;
+    bottom: 2px;
+}
+
+.device-status {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 4px;
+}
