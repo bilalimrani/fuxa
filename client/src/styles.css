@@ -28,14 +28,13 @@
 
 @font-face {
     font-family: "Roboto-Light";
-    src: local("Roboto Light"), local("Roboto-Light"),
-        url("./assets/fonts/roboto-light/roboto-light-webfont.woff")
+    src: url("./assets/fonts/roboto-light-webfont.woff")
             format("woff"),
-        url("./assets/fonts/roboto-light/roboto-light-webfont.woff2")
+        url("./assets/fonts/roboto-light-webfont.woff2")
             format("woff2"),
-        url("./assets/fonts/roboto-light/roboto-light-webfont.ttf")
+        url("./assets/fonts/roboto-light-webfont.ttf")
             format("truetype"),
-        url("./assets/fonts/roboto-light/roboto-light-webfont.svg")
+        url("./assets/fonts/roboto-light-webfont.svg")
             format("svg");
 }
 

@@ -472,3 +472,23 @@
 2021-10-06T05:56:52.182Z [info] alarmsstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/alarms.fuxap.db database.
 2021-10-06T05:56:52.183Z [info] alarms.alarmstorage-init-successful!
 2021-10-06T05:57:40.592Z [info] alarms.stop-checkstatus!
+2021-10-06T07:26:27.526Z [info] FUXA V.1.1.01-469
+2021-10-06T07:26:27.537Z [info] daqstorage: init successful!
+2021-10-06T07:26:27.634Z [info] api: init successful!
+2021-10-06T07:26:27.636Z [info] plugin-installed node-opcua 2.50.0
+2021-10-06T07:26:27.636Z [info] plugin-installed node-bacnet 0.2.4
+2021-10-06T07:26:27.637Z [info] plugin-installed node-snap7 1.0.6
+2021-10-06T07:26:27.637Z [info] runtime init plugins successful!
+2021-10-06T07:26:27.638Z [info] prjstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/project.fuxap.db database
+2021-10-06T07:26:27.638Z [info] usrstorage.connected /Users/bilal/Documents/GitHub/FUXA/server/_appdata/users.fuxap.db database
+2021-10-06T07:26:27.642Z [info] project.prjstorage-init-successful!
+2021-10-06T07:26:27.642Z [info] runtime init project successful!
+2021-10-06T07:26:27.643Z [info] users.usrstorage-init successful!
+2021-10-06T07:26:27.643Z [info] runtime init users successful!
+2021-10-06T07:26:27.643Z [info] FUXA init in  128ms.
+2021-10-06T07:26:27.647Z [info] daqstorage reset!
+2021-10-06T07:26:27.648Z [info] FUXA started!
+2021-10-06T07:26:27.672Z [info] WebServer is running http://127.0.0.1:8080/
+2021-10-06T07:26:28.657Z [info] alarmsstorage.connected-to /Users/bilal/Documents/GitHub/FUXA/server/_appdata/alarms.fuxap.db database.
+2021-10-06T07:26:28.658Z [info] alarms.alarmstorage-init-successful!
+2021-10-06T07:27:57.184Z [info] alarms.stop-checkstatus!
