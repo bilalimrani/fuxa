@@ -40,14 +40,13 @@
 
 @font-face {
     font-family: "Roboto-Regular";
-    src: local("Roboto Regular"), local("Roboto-Regular"),
-        url("./assets/fonts/roboto-regular/roboto-regular-webfont.woff")
+    src: url("./assets/fonts/roboto-regular-webfont.woff")
             format("woff"),
-        url("./assets/fonts/roboto-regular/roboto-regular-webfont.woff2")
+        url("./assets/fonts/roboto-regular-webfont.woff2")
             format("woff2"),
-        url("./assets/fonts/roboto-regular/roboto-regular-webfont.ttf")
+        url("./assets/fonts/roboto-regular-webfont.ttf")
             format("truetype"),
-        url("./assets/fonts/roboto-regular/roboto-regular-webfont.svg")
+        url("./assets/fonts/roboto-regular-webfont.svg")
             format("svg");
 }
 
